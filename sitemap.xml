@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://bpen-studio.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/apps/moment/</loc>
+    <loc>https://bpen-studio.com/apps/moment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/apps/moment/privacy.html</loc>
+    <loc>https://bpen-studio.com/apps/moment/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/legal/terms.html</loc>
+    <loc>https://bpen-studio.com/legal/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
