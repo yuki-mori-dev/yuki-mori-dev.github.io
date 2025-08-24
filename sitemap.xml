@@ -13,10 +13,10 @@
   <url>
     <loc>https://example.com/apps/moment/privacy.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/apps/moment/terms.html</loc>
+    <loc>https://example.com/legal/terms.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
