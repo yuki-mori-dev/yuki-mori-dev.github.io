@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0b0f">
+    <title>Developer Website</title>
+    <meta name="description" content="iOSアプリ開発者のサイト。アプリ紹介、プライバシーポリシー、利用規約など。">
+    <link rel="preload" href="/assets/css/styles.css" as="style">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner container">
+        <div class="brand">Developer</div>
+        <nav class="nav">
+          <a href="/">ホーム</a>
+          <a href="#apps">アプリ</a>
+          <a href="#contact">問い合わせ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>iOSアプリ開発</h1>
+        <p>モバイルファーストの軽量な静的サイト。各アプリの概要、プライバシーポリシー、利用規約を公開します。</p>
+      </section>
+
+      <section id="apps" class="section">
+        <h2>アプリ</h2>
+        <div class="card-list">
+          <article class="card">
+            <h3>MOMENT</h3>
+            <p class="desc">スクリーンタイムをプロ品質で。シンプルかつ高機能な集中支援アプリ。</p>
+            <p>
+              <a class="btn primary" href="/apps/moment/">概要を見る</a>
+              <a class="btn" href="/apps/moment/privacy.html">プライバシー</a>
+              <a class="btn" href="/apps/moment/terms.html">利用規約</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>問い合わせ</h2>
+        <p>ご連絡はメールにてお願いします：<a href="mailto:support@example.com">support@example.com</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="y"></span> Developer Website</small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

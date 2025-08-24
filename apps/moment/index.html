@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0b0f">
+    <title>MOMENT | アプリ概要</title>
+    <meta name="description" content="MOMENTはスクリーンタイムのプロ品質管理をシンプルなUIで提供するiOSアプリ。">
+    <link rel="preload" href="/assets/css/styles.css" as="style">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner container">
+        <div class="brand"><a href="/" style="color:inherit; text-decoration:none;">Developer</a></div>
+        <nav class="nav">
+          <a href="/">ホーム</a>
+          <a href="/apps/moment/">MOMENT</a>
+          <a href="/apps/moment/privacy.html">プライバシー</a>
+          <a href="/apps/moment/terms.html">利用規約</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>MOMENT コンセプト〜設計</h1>
+
+      <section class="section grid two">
+        <div>
+          <h2>アプリ名</h2>
+          <p>MOMENT</p>
+          <h2>コンセプト</h2>
+          <p>スクリーンタイムのプロフェッショナルな管理をシンプルなUI・日本語で。現状存在するOpalの機能を日本向けにリリースする。</p>
+          <h2>ターゲット/目的</h2>
+          <p>「第一志望に合格したいと思っている、高校3年生」の「スマホをいじって時間を潰してしまった自己嫌悪や焦りという苦痛を解決するアプリ」</p>
+        </div>
+        <div>
+          <h2>コア価値</h2>
+          <p>バグが少なく、エネルギー消費もない。一番シンプルで高機能。</p>
+          <h2>収益化</h2>
+          <p><strong>モデル:</strong> フリーミアム</p>
+          <h3>無料版</h3>
+          <ul class="list">
+            <li>シンプルなタイマー設定機能</li>
+            <li>選択したアプリをブロックする機能</li>
+            <li>集中できた時間の合計を記録・表示</li>
+            <li>スケジュール機能（個数無制限）</li>
+            <li>ホワイトリスト機能（個数無制限）</li>
+            <li>よりシンプルな実績記録</li>
+          </ul>
+          <h3>有料版（プロ）</h3>
+          <p>ディープフォーカスモード:</p>
+          <ul class="list">
+            <li>タイマー画面から簡単にオン/オフ</li>
+            <li>セッション中の通知を完全にシャットアウト</li>
+            <li>ホワイトリスト機能（個数無制限）</li>
+            <li>アプリのアンインストールによる解除の防止</li>
+            <li>緊急停止機能（検討中）</li>
+          </ul>
+          <p>高度な実績記録:</p>
+          <ul class="list">
+            <li>過去の記録を全て遡って確認</li>
+            <li>集中時間の詳細な分析（グラフ表示など）</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>機能優先度</h2>
+        <h3>P0：必須 (MVP)</h3>
+        <ul class="list">
+          <li>タイマー設定機能（分単位）</li>
+          <li>ブロック対象アプリの選択機能</li>
+          <li>フォーカス・セッションの開始/終了機能</li>
+          <li>セッション中の強制ブロック機能（中断不可）</li>
+          <li>集中できた時間の合計を記録・表示</li>
+        </ul>
+        <h3>P1：高</h3>
+        <ul class="list">
+          <li>スケジュール機能（自動開始）</li>
+          <li>ホワイトリスト機能</li>
+          <li>ウィジェット機能</li>
+          <li>詳細な実績レポート（日/週/月）</li>
+        </ul>
+        <h3>P2：中</h3>
+        <ul class="list">
+          <li>ポモドーロタイマー</li>
+          <li>環境音（雨音、焚き火など）</li>
+          <li>デザインテーマ（ライト/ダーク他）</li>
+        </ul>
+        <h3>P3：低（当面やらない）</h3>
+        <ul class="list">
+          <li>フレンド機能、SNS連携</li>
+          <li>ゲーム要素（キャラクター、ランキング）</li>
+          <li>Android版</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>MVPまでの手順</h2>
+        <ol class="list">
+          <li><strong>プロジェクト設定とUI骨格</strong>（1-2週間）: SwiftUIで主要4画面のガワを作成</li>
+          <li><strong>Screen Time API統合</strong>（2-3週間）: 単体アプリのブロックから開始</li>
+          <li><strong>セッションロジック実装</strong>（1-2週間）: タイマー×複数アプリブロック、中断不可</li>
+          <li><strong>データ永続化と実績表示</strong>（1週間）: SwiftDataで保存し表示</li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>U/UXと画面構成</h2>
+        <ol class="list">
+          <li>ホーム: 大きな「集中を開始」ボタン、設定導線、今日の合計</li>
+          <li>セッション設定: 時間ピッカー、アプリ選択、保存</li>
+          <li>セッション中: 残り時間のみを大きく表示、黒基調</li>
+          <li>実績: 日/週/月の合計とカレンダー可視化</li>
+        </ol>
+        <p>ユーザーフロー: 起動 → 開始 → 設定 → 開始 → セッション → 通知 → 実績</p>
+      </section>
+
+      <section class="section">
+        <h2>技術選定</h2>
+        <ul class="list">
+          <li>Swift（パフォーマンスと安定性、OS連携）</li>
+          <li>SwiftUI（宣言的UIで速度向上）</li>
+          <li>Screen Time API（OSレベルブロックで確実・省電力）</li>
+          <li>SwiftData（少ないコードで安全な永続化）</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>開発の心得</h2>
+        <ol class="list">
+          <li>完璧より完了（Done is better than perfect）</li>
+          <li>作っては触るのサイクルを最短に</li>
+          <li>次にやることをひとつだけに絞る</li>
+        </ol>
+      </section>
+
+      <p><a class="btn" href="/">← トップへ</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="y"></span> MOMENT</small>
+      </div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+
+
