@@ -136,6 +136,20 @@ a { text-underline-offset: 2px; }
 .app-hero h1 { font-size: 2.2rem; margin: 6px 0 4px; letter-spacing: .2px; }
 .app-hero p { font-size: 0.98rem; color: #cfd1dd; }
 
+/* app store style blocks */
+.subtitle { font-size: 1.05rem; color: #cfd1dd; margin: 6px 0 0; }
+.lead { font-size: 1rem; color: #e1e3ee; margin: 10px 0; }
+.section h2 .small { font-size: .85rem; color: var(--muted); font-weight: 600; }
+.slides .caption { font-size: .9rem; color: #cfd1dd; margin-top: 6px; }
+
+/* polish visuals */
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.tag { display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid #2c2d37; background: #141722; color: #cfd1dd; font-size: .8rem; }
+.divider { height: 1px; background: #22232b; margin: 16px 0; border: 0; }
+.feature .desc { color: #d6d8e6; }
+.section .kicker { color: var(--muted); font-weight: 700; font-size: .78rem; letter-spacing: .04em; }
+.screens-wrap { background: #11131a; border: 1px solid #22232b; border-radius: 12px; padding: 10px; }
+
 /* layout grids */
 .grid.auto { display: grid; grid-template-columns: 1fr; gap: 12px; }
 @media (min-width: 720px) {
@@ -222,4 +236,7 @@ a { text-underline-offset: 2px; }
 .link-item .emoji { font-size: 1.1rem; }
 .link-item .label { letter-spacing: 0.2px; }
 .link-item .arrow { opacity: .7; }
+
+/* list card tweaks */
+.arrow { opacity: .7; color: var(--muted); }
 
