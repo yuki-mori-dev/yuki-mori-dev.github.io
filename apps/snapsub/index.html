@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0b0f">
+    <title>SnapSub: スクショでサブスク管理 | Yuki Mori</title>
+    <meta name="description" content="AIでスクショを自動解析してサブスクを登録。月の合計、割合、履歴を見える化。通知で支払い忘れ防止。">
+    <link rel="preload" href="/assets/css/styles.css" as="style">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    
+
+    <main class="container">
+      <section class="section">
+        <h1 style="margin-top:0;">SnapSub: スクショでサブスク管理</h1>
+        <p class="subtitle">AIで自動登録！毎月の支出を把握</p>
+        <p class="lead">サブスク管理をもっとスマートに、もっと簡単に。SnapSubは、AIがスクリーンショットを自動解析し、煩わしい手入力を不要にします。月々の合計費用はもちろん、サービスごとの支出割合や過去の履歴もグラフで「見える化」。支払い忘れを防ぐ通知機能も搭載。賢くサブスクを管理し、無駄な出費を減らしましょう。</p>
+      </section>
+
+      <section class="section">
+        <h2>主な特徴</h2>
+        <div class="features">
+          <article class="feature">
+            <div class="icon">🤖</div>
+            <h3>AIで超高速登録</h3>
+            <p class="desc">スクショを撮るだけで、AIがサービス名・料金・サイクル等を自動抽出。月に15回までAI解析が0円。手動の追加・編集も簡単。</p>
+          </article>
+          <article class="feature">
+            <div class="icon">📊</div>
+            <h3>支出を「見える化」</h3>
+            <p class="desc">ホームで月間合計を確認。円グラフで割合、棒グラフで月別推移を表示。リストと連動して詳細も即チェック。</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🔔</div>
+            <h3>支払い忘れを防止</h3>
+            <p class="desc">支払い期日を事前にローカル通知でお知らせ。通知タイミングは自由に設定できます。</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🔒</div>
+            <h3>安心のプライバシー</h3>
+            <p class="desc">サブスク情報は端末内に保存。スクショは解析のためだけに利用し、当方が収集・保存することはありません。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>スクリーンショット</h2>
+        <div class="slider" id="screens">
+          <div class="slides">
+            <div class="slide">
+              <img class="ph-screen" src="/assets/images/snapsub/screens/1.png" alt="スクリーンショット1">
+              <div class="caption">スクショからサブスク情報を抽出</div>
+            </div>
+            <div class="slide">
+              <img class="ph-screen" src="/assets/images/snapsub/screens/2.png" alt="スクリーンショット2">
+              <div class="caption">月額の合計を自動計算</div>
+            </div>
+            <div class="slide">
+              <img class="ph-screen" src="/assets/images/snapsub/screens/3.png" alt="スクリーンショット3">
+              <div class="caption">支払いスケジュールをリマインド</div>
+            </div>
+            <div class="slide">
+              <img class="ph-screen" src="/assets/images/snapsub/screens/4.png" alt="スクリーンショット4">
+              <div class="caption">カテゴリ別の支出割合を可視化</div>
+            </div>
+          </div>
+          <div class="slider-dots" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>こんな方におすすめ</h2>
+        <ul class="feature-list">
+          <li><span class="icon-check">✓</span> 音楽/動画配信やクラウド等、複数のサブスクを使っている方</li>
+          <li><span class="icon-check">✓</span> 毎月のサブスク支出がいくらか把握したい方</li>
+          <li><span class="icon-check">✓</span> 手軽に、正確にサブスク管理をしたい方</li>
+          <li><span class="icon-check">✓</span> 無駄な支出を見直して節約したい方</li>
+          <li><span class="icon-check">✓</span> 支払い日を忘れがちな方</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="muted">その他</h2>
+        <p>
+          <a class="btn" href="/apps/snapsub/privacy.html">プライバシーポリシー</a>
+          <a class="btn" href="/legal/terms.html">利用規約</a>
+          <a class="btn" href="/apps/snapsub/faq.html">FAQ</a>
+        </p>
+      </section>
+
+      <p><a class="btn" href="/">← トップへ</a></p>
+      <p class="muted" style="margin-top:12px;">注：AI解析の無料枠は月15回までを予定しています。</p>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="y"></span> Yuki Mori</small>
+      </div>
+    </footer>
+
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    <script>
+      (function(){
+        const root = document.getElementById('screens');
+        if (!root) return;
+        const slides = root.querySelector('.slides');
+        const dotsWrap = root.querySelector('.slider-dots');
+        const items = Array.from(root.querySelectorAll('.slide'));
+        if (!slides || !dotsWrap || items.length === 0) return;
+        items.forEach((_, i) => {
+          const d = document.createElement('span');
+          d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+          dotsWrap.appendChild(d);
+        });
+        const dots = Array.from(dotsWrap.children);
+        const update = () => {
+          const w = slides.clientWidth; const x = slides.scrollLeft; const i = Math.round(x / w);
+          dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+        };
+        slides.addEventListener('scroll', () => { requestAnimationFrame(update); });
+        update();
+      })();
+    </script>
+  </body>
+  </html>
+
+
+

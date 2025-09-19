@@ -11,6 +11,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bpen-studio.com/apps/snapsub/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bpen-studio.com/apps/snapsub/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bpen-studio.com/apps/moment/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
